@@ -1,6 +1,9 @@
-import express from "express";  // Usar import en lugar de require
+import express from "express"; 
+import router from "./router.js";
 
 const server = express();
 
-// Exporta el servidor
-export default server; // Usar export default para exportar una instancia del servidor
+server.use('/api/products', router);
+
+
+export default server;  

@@ -6,7 +6,7 @@ import db from "./config/db.js";
 async function connectDB() {
   try {
     await db.authenticate()
-    db.sync({ force: false });
+    db.sync({ alter: true });
     console.log(colors.bgGreen.bold('Conexión exitosa a la BD'));
   } catch (error) {
     // console.log( error );

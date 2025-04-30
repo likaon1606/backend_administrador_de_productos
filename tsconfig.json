@@ -1,23 +1,19 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",                    
-    "rootDir": "./src",                    
-    "lib": ["ESNext"],                     
-    "strict": false,                        
-    "sourceMap": true,                     
-    "esModuleInterop": true,               
-    "declaration": true,                   
-    "target": "ES2020",                    
-    "module": "ESNext",                    
-    "moduleResolution": "Node",            
-    "resolveJsonModule": true,             
+    "outDir": "./dist",                    // Donde se guardarán los archivos compilados.
+    "rootDir": "./src",                    // El directorio raíz de los archivos TypeScript.
+    "lib": ["ESNext"],                     // Asegura que se usen características de ESNext.
+    "strict": false,                        // Desactiva las reglas estrictas si no las necesitas.
+    "sourceMap": true,                     // Genera archivos sourceMap para depuración.
+    "esModuleInterop": true,               // Para manejar módulos de CommonJS y ES Modules correctamente.
+    "declaration": true,                   // Genera archivos de declaración .d.ts.
+    "target": "ES2020",                    // Usar ES2020 como objetivo de salida.
+    "module": "ESNext",                    // Configura el módulo como ESNext para soportar import/export.
+    "moduleResolution": "Node",            // Resolución de módulos similar a Node.js.
+    "resolveJsonModule": true,             // Permite importar archivos JSON como módulos.
     "skipLibCheck": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "baseUrl": "./src",   // Esto es lo importante
-    "paths": {
-      "@models/*": ["models/*"]   // Definir alias para los modelos
-    }
+    "emitDecoratorMetadata": true                   // Ignora la comprobación de tipo en los archivos de las bibliotecas.
   },
-  "include": ["src/**/*.ts"]                
+  "include": ["src/**/*.ts"]                // Asegura que todos los archivos TS en src se incluyan.
 }
